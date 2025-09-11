@@ -20,7 +20,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd khu9utsu/fun_project_1_REAID
+  cd fun_project_1_REAID
 ```
 
 Install dependencies

@@ -12,195 +12,195 @@ st.set_page_config(
 
 # Custom CSS untuk animasi dan styling
 st.markdown("""
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
   * {
     font-family: 'Montserrat', sans-serif;
     }
-  .main {
+.main {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 20px;
     border-radius: 15px;
-  }
-  .stButton>button {
-      background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 25px;
-      adding: 12px 30px;
-      margin: 10px 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
-      width: 100%;
-  }    
-  .stButton>button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
-  }
+}
+.stButton>button {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    adding: 12px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+}    
+.stButton>button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+}
     
-  .stButton>button:disabled {
-      background: rgba(255, 255, 255, 0.3);
-      transform: none;
-      box-shadow: none;
-      cursor: not-allowed;
+.stButton>button:disabled {
+    background: rgba(255, 255, 255, 0.3);
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
     }    
-  .score-display {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      animation: pulse 2s infinite;
-  }    
-  .title {
-      color: white;
-      text-align: center;
-      font-size: 2.8em;
-      font-weight: 700;
-      margin-bottom: 10px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-      animation: bounce 1.5s ease infinite;
-  }
-  .subtitle {
-      color: white;
-      text-align: center;
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      animation: fadeIn 2s ease;
-  }
-  .option-button {
-      transition: all 0.3s ease !important;
-  }
-  .option-button:hover {
-      transform: scale(1.03) !important;
-  }
-  .celebration {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-      font-size: 3em;
-      animation: celebrate 1s ease infinite;
-  }
-  .progress-bar {
-      height: 10px;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.3);
-      margin: 20px 0;
-      overflow: hidden;
+.score-display {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}    
+.title {
+    color: white;
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    animation: bounce 1.5s ease infinite;
+}
+.subtitle {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease;
+}
+.option-button {
+    transition: all 0.3s ease !important;
+}
+.option-button:hover {
+    transform: scale(1.03) !important;
+}
+.celebration {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 3em;
+    animation: celebrate 1s ease infinite;
+}
+.progress-bar {
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+    overflow: hidden;
     }
-  .progress-fill {
-      height: 100%;
-      border-radius: 5px;
-      background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-      transition: width 0.5s ease;
-  }
-    
-  @keyframes fadeIn {
-      from { 
+.progress-fill {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    transition: width 0.5s ease;
+    }
+
+@keyframes fadeIn {
+    from { 
         opacity: 0; 
-          transform: translateY(20px); 
-      }
-      to { 
-          opacity: 1; 
-          transform: translateY(0); 
-      }
-  }
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
     
-  @keyframes pulse {
-      0% { 
-          transform: scale(1); 
-      }
-      50% { 
-          transform: scale(1.05); 
-      }
-      100% { 
-          transform: scale(1); 
-      }
-  }
+@keyframes pulse {
+    0% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
     
-  @keyframes bounce {
-      0%, 100% { 
-          transform: translateY(0); 
-      }
-      50% { 
-          transform: translateY(-10px); 
-      }
-  }
+@keyframes bounce {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-10px); 
+    }
+}
     
-  @keyframes celebrate {
-      0%, 100% { 
-          transform: scale(1); 
-      }
-      50% { 
-          transform: scale(1.2); 
-      }
-  }
+@keyframes celebrate {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.2); 
+    }
+}
     
-  @keyframes confetti {
-      0% {
-          transform: translateY(0) rotate(0);
-          opacity: 1;
-      }
-      100% {
-          transform: translateY(100vh) rotate(720deg);
-          opacity: 0;
-      }
-  }
+@keyframes confetti {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
     
-  .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      opacity: 0;
-      pointer-events: none;
-  }
-  .firework {
-      position: fixed;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0;
-  }
-  </style>
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+.firework {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+</style>
     """, unsafe_allow_html=True)
 
 # Data pertanyaan kuis
 questions = [
     {
-      "question": "Manakah cara yang benar untuk membuat fungsi di Python?",
-      "options": [
-          "def my_function():",
-          "function my_function():",
-          "create my_function():",
-          "define my_function():"
-      ],
-      "correct_answer": "def my_function():",
-      "explanation": "Di Python, fungsi didefinisikan menggunakan kata kunci 'def' diikuti dengan nama fungsi dan tanda kurung."
+    "question": "Manakah cara yang benar untuk membuat fungsi di Python?",
+    "options": [
+        "def my_function():",
+        "function my_function():",
+        "create my_function():",
+        "define my_function():"
+    ],
+    "correct_answer": "def my_function():",
+    "explanation": "Di Python, fungsi didefinisikan menggunakan kata kunci 'def' diikuti dengan nama fungsi dan tanda kurung."
     },
     {
-      "question": "Apa output dari: print(3 * 'hi'?)",
-      "options": [
-          "hihihi",
-          "3hi",
-          "Error",
-          "hi hi hi"
-      ],
-      "correct_answer": "hihihi",
-      "explanation": "Di Python, mengalikan string dengan integer akan mengulang string sebanyak nilai integer tersebut."
+    "question": "Apa output dari: print(3 * 'hi'?)",
+    "options": [
+        "hihihi",
+        "3hi",
+        "Error",
+        "hi hi hi"
+    ],
+    "correct_answer": "hihihi",
+    "explanation": "Di Python, mengalikan string dengan integer akan mengulang string sebanyak nilai integer tersebut."
     },
     {
-      "question": "Metode apa yang digunakan untuk menghapus elemen terakhir dari list?",
-      "options": [
-          "remove()",
-          "pop()",
-          "delete()",
-          "cut()"
-      ],
-      "correct_answer": "pop()",
-      "explanation": "Metode pop() menghapus dan mengembalikan elemen terakhir dari list jika tidak ada index yang ditentukan."
+    "question": "Metode apa yang digunakan untuk menghapus elemen terakhir dari list?",
+    "options": [
+        "remove()",
+        "pop()",
+        "delete()",
+        "cut()"
+    ],
+    "correct_answer": "pop()",
+    "explanation": "Metode pop() menghapus dan mengembalikan elemen terakhir dari list jika tidak ada index yang ditentukan."
     }
 ]
 
@@ -215,7 +215,7 @@ def initialize_quiz():
     if 'answered' not in st.session_state:
         st.session_state.answered = False
     if 'questions' not in st.session_state:
-        st.session_state.questions = random.sample(questions, min(5, len(questions)))
+        st.session_state.questions = random.sample(questions, min(3, len(questions)))
     if 'start_time' not in st.session_state:
         st.session_state.start_time = time.time()
     if 'quiz_complete' not in st.session_state:
